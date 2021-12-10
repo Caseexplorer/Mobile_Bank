@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileBank">
         <activity
+            android:name=".ui.dashboard.Cardfee"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dashboard.Schoolfare"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dashboard.Electricity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dashboard.Waterfee"
+            android:exported="false" />
+        <activity
             android:name=".ui.dashboard.Pay"
             android:exported="false" />
         <activity

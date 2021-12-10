@@ -2,6 +2,7 @@ package com.example.mobilebank.ui.dashboard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -37,19 +38,23 @@ public class Pay extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if(i == 0)
                 {
-                    Toast.makeText(Pay.this,"1",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(Pay.this,Waterfee.class);
+                    startActivity(intent);
                 }
                 if(i == 1)
                 {
-                    Toast.makeText(Pay.this,"2",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(Pay.this,Electricity.class);
+                    startActivity(intent);
                 }
                 if(i == 2)
                 {
-                    Toast.makeText(Pay.this,"3",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(Pay.this,Schoolfare.class);
+                    startActivity(intent);
                 }
                 if(i == 3)
                 {
-                    Toast.makeText(Pay.this,"4",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(Pay.this,Cardfee.class);
+                    startActivity(intent);
                 }
 
             }
