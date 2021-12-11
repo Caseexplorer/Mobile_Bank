@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileBank">
         <activity
+            android:name=".ui.dashboard.Bankcard"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dashboard.Cardinfo"
+            android:exported="false" />
+        <activity
             android:name=".ui.dashboard.Cardfee"
             android:exported="false" />
         <activity
