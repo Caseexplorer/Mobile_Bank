@@ -26,10 +26,10 @@
             />
 
         <Button
-            android:id="@+id/Usernameedit"
+            android:id="@+id/Cardchoose"
             android:layout_width="0dp"
             android:layout_weight="2"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:textSize="20sp"
             android:text="请选择>"
             android:textColor="@color/black"
