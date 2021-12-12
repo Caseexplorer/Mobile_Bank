@@ -30,7 +30,7 @@ public class Bankcard extends AppCompatActivity {
 
         listView = findViewById(R.id.mainListView2);
         list = new ArrayList<>();
-        adapter = new SimpleAdapter(this,a(),R.layout.item,new String[]{"图片","文字"},new int []{R.id.itemImageView1,R.id.itemTextView1});
+        adapter = new SimpleAdapter(this,a(),R.layout.item2,new String[]{"图片","文字1","文字2"},new int []{R.id.itemImageView1,R.id.itemTextView1,R.id.itemTextView2});
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -38,8 +38,18 @@ public class Bankcard extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if(i == 0)
                 {
-                    Intent intent = new Intent(Bankcard.this,Cardfee.class);
-                    startActivity(intent);
+                    //设置返回的数据
+
+                    Intent intent = new Intent();
+
+                    intent.putExtra("data", "62320958732905 >");//edtOne.getText().toString().trim()
+
+                    setResult(3, intent);
+
+                    //关闭当前activity
+
+                    finish();
+
                 }
 
             }
@@ -51,7 +61,8 @@ public class Bankcard extends AppCompatActivity {
     {
         Map<String,Object>map1 = new HashMap<String,Object>();
         map1.put("图片",R.drawable.bankcard);
-        map1.put("文字","长城电子借记卡");
+        map1.put("文字1","长城电子借记卡");
+        map1.put("文字2","62320958732905");
         list.add(map1);
         return list;
     }

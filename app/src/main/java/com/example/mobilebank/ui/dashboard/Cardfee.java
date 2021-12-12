@@ -18,7 +18,7 @@ public class Cardfee extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cardfee);
-        setTitle("校园卡缴费");
+        setTitle("校园卡");
 
         next = findViewById(R.id.Cardnext);
         choosecard = findViewById(R.id.Cardchoose);
@@ -35,8 +35,18 @@ public class Cardfee extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Cardfee.this,Bankcard.class);
-                startActivity(intent);
+                startActivityForResult(intent, 11);
             }
         });
     }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);
+
+        String str = data.getStringExtra("data");
+
+        choosecard.setText(str);
+
+    }
+
 }
