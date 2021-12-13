@@ -26,8 +26,11 @@ public class Cardfee extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Cardfee.this,Cardinfo.class);
-                startActivity(intent);
+
+                    Intent intent = new Intent(Cardfee.this,Cardinfo.class);
+                    startActivity(intent);
+
+
             }
         });
 
@@ -36,6 +39,8 @@ public class Cardfee extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Cardfee.this,Bankcard.class);
                 startActivityForResult(intent, 11);
+
+
             }
         });
     }
@@ -46,6 +51,12 @@ public class Cardfee extends AppCompatActivity {
         String str = data.getStringExtra("data");
 
         choosecard.setText(str);
+
+        String choosecontent = String.valueOf(choosecard.getText());;
+        if(!choosecontent.equals("请选择>"))
+        {
+            next.setEnabled(true);
+        }
 
     }
 

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileBank">
         <activity
+            android:name=".ui.dashboard.Balance"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dashboard.Payhistory"
+            android:exported="false" />
+        <activity
             android:name=".ui.dashboard.CardTopUp"
             android:exported="false" />
         <activity

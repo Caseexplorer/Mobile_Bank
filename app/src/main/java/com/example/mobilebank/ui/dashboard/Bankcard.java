@@ -55,6 +55,7 @@ public class Bankcard extends AppCompatActivity {
             }
         });
 
+
     }
 
     private List<Map<String,Object>>a()
@@ -65,5 +66,20 @@ public class Bankcard extends AppCompatActivity {
         map1.put("文字2","62320958732905");
         list.add(map1);
         return list;
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent intent = new Intent();
+        intent.putExtra("data", "请选择>");//edtOne.getText().toString().trim()
+
+        setResult(3, intent);
+
+        //关闭当前activity
+
+        finish();
+
+        super.onBackPressed();
     }
 }
