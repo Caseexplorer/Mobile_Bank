@@ -72,7 +72,7 @@ public class Bankcard extends AppCompatActivity {
     public void onBackPressed() {
 
         Intent intent = new Intent();
-        intent.putExtra("data", "请选择>");//edtOne.getText().toString().trim()
+        intent.putExtra("data", "请选择 >");//edtOne.getText().toString().trim()
 
         setResult(3, intent);
 
